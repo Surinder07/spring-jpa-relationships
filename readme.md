@@ -25,3 +25,12 @@ A student can enroll to many courses and many courses can have multiple students
 # Directions
 1. Unidirectional 
 2. Bi-direction 
+
+
+# Cascade types 
+Persist 
+Merge 
+Remove 
+Refresh 
+Detach 
+All

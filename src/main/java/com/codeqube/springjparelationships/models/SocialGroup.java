@@ -2,14 +2,16 @@ package com.codeqube.springjparelationships.models;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
-public class SocialProfile {
+public class SocialGroup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(mappedBy = "socialProfile")
-    private SocialUser user;
-
+    @ManyToMany(mappedBy = "groups")
+    private Set<SocialUser> socialUsers = new HashSet<>();
 }
